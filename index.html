@@ -1,1292 +1,644 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iFix Express CAD - Premium iPhone Screen Repair Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                            accent: '#38bdf8',
-                        },
-                        darkbg: '#0f172a',
-                        cardbg: '#1e293b',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .glass-header {
-            background: rgba(15, 23, 42, 0.88);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glow-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glow-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.15), 0 8px 10px -6px rgba(56, 189, 248, 0.1);
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iFix YYC - Professional iPhone Screen Repair Calgary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+    }
+  </style>
 </head>
-<body class="bg-darkbg text-slate-100 min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Top Announcement / Quick Info Bar -->
-    <div class="bg-gradient-to-r from-brand-900 via-brand-700 to-indigo-900 text-xs py-2 px-4 text-center text-slate-200 border-b border-white/10 font-medium">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 px-2">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-brand-accent"></i> Certified High-Grade Screens & Professional Installation Included</span>
-            <div class="flex items-center gap-4 text-xs font-semibold">
-                <a href="mailto:singhinderj01@gmail.com" class="hover:text-brand-accent transition flex items-center gap-1">
-                    <i class="fa-regular fa-envelope"></i> singhinderj01@gmail.com
-                </a>
-                <span class="text-slate-500">|</span>
-                <button onclick="openOwnerLogin()" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
-                    <i class="fa-solid fa-lock text-[10px]"></i> Owner Portal
-                </button>
-            </div>
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 glass-effect border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+          <i class="fa-solid fa-mobile-screen-button text-xl"></i>
         </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-slate-900 block leading-none">iFix YYC</span>
+          <span class="text-xs text-blue-600 font-medium">Calgary iPhone Repair</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#calculator" class="text-slate-600 hover:text-blue-600 transition">Instant Estimator</a>
+        <a href="#models" class="text-slate-600 hover:text-blue-600 transition">Models & Pricing</a>
+        <a href="#screen-guide" class="text-slate-600 hover:text-blue-600 transition">LCD vs Soft OLED</a>
+        <a href="#booking" class="text-slate-600 hover:text-blue-600 transition">Book Appointment</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button onclick="toggleOwnerPortal()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-300 font-medium transition flex items-center gap-1.5">
+          <i class="fa-solid fa-user-gear text-slate-500"></i> Owner Portal
+        </button>
+        <a href="#booking" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm">
+          Book Repair
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH INSTANT ESTIMATOR -->
+  <section id="calculator" class="py-12 lg:py-16 bg-gradient-to-b from-blue-50 via-slate-50 to-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-blue-800 text-xs font-semibold">
+            <i class="fa-solid fa-shield-halved text-blue-600"></i> Calgary Local Expert Installation
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Fast, Reliable <span class="text-blue-600">iPhone Screen Repair</span> in Calgary
+          </h1>
+          <p class="text-base text-slate-600 max-w-xl">
+            Select your iPhone model to see clear, upfront pricing with professional installation included. Standard turnaround is 30–45 minutes.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-2">
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
+              <i class="fa-solid fa-clock text-blue-600 text-lg mb-1"></i>
+              <div class="text-xs font-bold text-slate-800">Same Day</div>
+              <div class="text-[11px] text-slate-500">30 Min Service</div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
+              <i class="fa-solid fa-square-check text-emerald-600 text-lg mb-1"></i>
+              <div class="text-xs font-bold text-slate-800">Quality Tested</div>
+              <div class="text-[11px] text-slate-500">Display Inspected</div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
+              <i class="fa-solid fa-tag text-purple-600 text-lg mb-1"></i>
+              <div class="text-xs font-bold text-slate-800">No Hidden Fees</div>
+              <div class="text-[11px] text-slate-500">Parts + Installation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESTIMATOR CALCULATOR CARD -->
+        <div class="lg:col-span-6">
+          <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-8">
+            <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-calculator text-blue-600"></i> Calculate Repair Price
+            </h2>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Select iPhone Model</label>
+                <select id="hero-model-select" onchange="calculateHeroPrice()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                  <!-- JS populated -->
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Select Screen Technology</label>
+                <div class="grid grid-cols-2 gap-3" id="hero-screen-options">
+                  <!-- JS populated options -->
+                </div>
+              </div>
+
+              <!-- Breakdown Card -->
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-sm">
+                <div class="flex justify-between text-slate-600">
+                  <span>Display Component Cost:</span>
+                  <span id="hero-part-cost" class="font-semibold text-slate-800">$0.00 CAD</span>
+                </div>
+                <div class="flex justify-between text-slate-600">
+                  <span>Includes Professional Installation:</span>
+                  <span id="hero-labour-cost" class="font-semibold text-slate-800">$0.00 CAD</span>
+                </div>
+                <div class="border-t border-slate-200 pt-2 flex justify-between items-center font-bold text-slate-900 text-base">
+                  <span>Total Out-The-Door Price:</span>
+                  <span id="hero-total-price" class="text-2xl text-blue-600">$0.00 CAD</span>
+                </div>
+              </div>
+
+              <button onclick="bookCalculatedModel()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                <i class="fa-solid fa-calendar-check"></i> Book This Repair Slot
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL MODELS & PRICING LIST SECTION -->
+  <section id="models" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <h2 class="text-3xl font-extrabold text-slate-900">All iPhone Models & Pricing</h2>
+        <p class="text-slate-600 text-sm mt-1">Full pricing catalog including display unit cost + complete installation fee.</p>
+      </div>
+
+      <!-- SEARCH & FILTER CONTROLS -->
+      <div class="flex flex-wrap gap-2">
+        <div class="relative min-w-[220px]">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+          <input type="text" id="model-search" oninput="renderModels()" placeholder="Search iPhone model..." class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <select id="series-filter" onchange="renderModels()" class="bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <option value="ALL">All Series</option>
+          <option value="17">iPhone 17 Series</option>
+          <option value="16">iPhone 16 Series</option>
+          <option value="15">iPhone 15 Series</option>
+          <option value="14">iPhone 14 Series</option>
+          <option value="13">iPhone 13 Series</option>
+          <option value="12">iPhone 12 & Older</option>
+        </select>
+      </div>
     </div>
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-40 glass-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo -->
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
-                        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
-                    </div>
-                    <div>
-                        <a href="#" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                            iFix<span class="text-brand-accent">Express</span> <span class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-500/20 text-brand-accent border border-brand-500/30">CAD</span>
-                        </a>
-                        <p class="text-[11px] text-slate-400 -mt-0.5">Official Quality Parts & Certified Installation</p>
-                    </div>
-                </div>
-
-                <!-- Desktop Nav Navigation -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#catalog" class="text-slate-300 hover:text-brand-accent transition">Models & Installed Pricing</a>
-                    <a href="#guide" class="text-slate-300 hover:text-brand-accent transition">LCD vs OLED Guide</a>
-                    <a href="#about" class="text-slate-300 hover:text-brand-accent transition">Why Choose Us</a>
-                    <a href="#booking" class="bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/30 transition-all transform hover:scale-[1.02]">
-                        <i class="fa-regular fa-calendar-check mr-2"></i>Book Repair
-                    </a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-slate-800/80 border border-slate-700">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Dropdown Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
-            <a href="#catalog" class="mobile-link block text-slate-200 py-2 font-medium">Models & Installed Pricing</a>
-            <a href="#guide" class="mobile-link block text-slate-200 py-2 font-medium">LCD vs OLED Guide</a>
-            <a href="#about" class="mobile-link block text-slate-200 py-2 font-medium">Why Choose Us</a>
-            <button onclick="openOwnerLogin()" class="mobile-link w-full text-left text-amber-400 py-2 font-medium flex items-center gap-2">
-                <i class="fa-solid fa-lock"></i> Owner Portal / Login
-            </button>
-            <a href="#booking" class="mobile-link block bg-brand-600 text-white font-semibold py-3 rounded-xl text-center shadow-md">Book Repair Now</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-900/40 via-darkbg to-darkbg -z-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-xs text-brand-accent font-medium shadow-inner">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                        Premium Grade Parts + Professional Expert Installation
-                    </div>
-                    
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                        Cracked iPhone Screen? <br class="hidden sm:inline"/>
-                        <span class="bg-gradient-to-r from-brand-accent via-sky-300 to-indigo-300 bg-clip-text text-transparent">Fixed Fast & Professional.</span>
-                    </h1>
-
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        Transparent CAD pricing for all iPhone models. We combine high-grade display assemblies with expert installation for long-lasting, factory-like results.
-                    </p>
-
-                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white font-bold text-center shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5">
-                            <i class="fa-solid fa-tags mr-2"></i> View Price with Installation
-                        </a>
-                        <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-center border border-slate-700 transition">
-                            <i class="fa-solid fa-wrench mr-2"></i> Schedule Repair Slot
-                        </a>
-                    </div>
-
-                    <!-- Key highlights stats -->
-                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-left">
-                        <div>
-                            <div class="text-xl sm:text-2xl font-bold text-white">30 Min</div>
-                            <p class="text-xs text-slate-400">Average Turnaround</p>
-                        </div>
-                        <div>
-                            <div class="text-xl sm:text-2xl font-bold text-brand-accent">100%</div>
-                            <p class="text-xs text-slate-400">Quality Assured</p>
-                        </div>
-                        <div>
-                            <div class="text-xl sm:text-2xl font-bold text-emerald-400">6 - 17</div>
-                            <p class="text-xs text-slate-400">All iPhone Models</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Graphic Card / Quick Price Check -->
-                <div class="lg:col-span-5">
-                    <div class="bg-cardbg/80 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-slate-700/60 shadow-2xl relative">
-                        <div class="absolute -top-3 -right-3 bg-emerald-500 text-slate-950 font-bold text-xs uppercase px-3 py-1 rounded-full shadow">
-                            Upfront CAD Pricing
-                        </div>
-
-                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-calculator text-brand-accent"></i> Quick Price Calculator
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-6">Includes screen part + professional installation.</p>
-
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Select iPhone Model</label>
-                                <select id="hero-model-select" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                                    <!-- Populated by JS -->
-                                </select>
-                            </div>
-
-                            <div id="hero-labor-badge" class="text-[11px] px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-amber-300 flex items-center justify-between">
-                                <span><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Professional Installation:</span>
-                                <span id="hero-labor-rate" class="font-bold">Included</span>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3 pt-1">
-                                <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-                                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Standard LCD</span>
-                                    <div id="hero-lcd-price" class="text-xl font-extrabold text-slate-100 mt-1">$0 CAD</div>
-                                    <span class="text-[10px] text-slate-500">Price with Installation</span>
-                                </div>
-                                <div class="p-3.5 rounded-2xl bg-brand-900/30 border border-brand-500/40 text-center">
-                                    <span class="text-[11px] font-semibold text-brand-accent uppercase tracking-wider block">Soft OLED</span>
-                                    <div id="hero-oled-price" class="text-xl font-extrabold text-brand-accent mt-1">$0 CAD</div>
-                                    <span class="text-[10px] text-brand-400/80">Price with Installation</span>
-                                </div>
-                            </div>
-
-                            <button id="hero-book-btn" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-900/30 flex items-center justify-center gap-2">
-                                <i class="fa-regular fa-calendar-check"></i> Book Selected Model
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Catalog Section -->
-    <section id="catalog" class="py-16 bg-slate-900/60 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Full iPhone Repair Pricing Catalog</h2>
-                <p class="text-slate-400 mt-3 text-sm sm:text-base">
-                    Every price transparently reflects certified screen part costs with expert installation in Canadian Dollars (CAD).
-                </p>
-            </div>
-
-            <!-- Search and Filter Bar -->
-            <div class="bg-cardbg p-4 rounded-2xl border border-slate-700/80 mb-8 space-y-4 md:space-y-0 md:flex md:items-center md:justify-between md:gap-4">
-                
-                <!-- Search Input -->
-                <div class="relative flex-1">
-                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    <input type="text" id="model-search" placeholder="Search model (e.g. iPhone 17 Pro, 16, 15, 14, 11)..." class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-11 pr-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                </div>
-
-                <!-- Series Filters -->
-                <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 custom-scrollbar text-xs font-medium" id="series-filter-container">
-                    <!-- Populated JS -->
-                </div>
-            </div>
-
-            <!-- Pricing Grid -->
-            <div id="pricing-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cards render dynamically via JavaScript -->
-            </div>
-
-            <!-- Empty State -->
-            <div id="empty-state" class="hidden text-center py-16 bg-cardbg/40 rounded-3xl border border-dashed border-slate-700">
-                <i class="fa-solid fa-mobile-screen text-4xl text-slate-600 mb-3"></i>
-                <h3 class="text-lg font-semibold text-slate-300">No matching iPhone models found</h3>
-                <p class="text-xs text-slate-500 mt-1">Try adjusting your search terms or series filter selection.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screen Comparison Section -->
-    <section id="guide" class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-brand-accent uppercase tracking-wider px-3 py-1 bg-brand-500/10 rounded-full border border-brand-500/20">Buyer's Guide</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Which Screen Choice Is Right For You?</h2>
-                <p class="text-slate-400 mt-3 text-sm sm:text-base">
-                    We explain the technical differences so you can make an informed choice for your phone and budget.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Standard LCD Card -->
-                <div class="bg-cardbg rounded-3xl p-8 border border-slate-700/80 hover:border-slate-600 transition relative flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
-                                Budget Friendly
-                            </span>
-                            <i class="fa-solid fa-layer-group text-2xl text-slate-400"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Standard LCD Display</h3>
-                        <p class="text-xs text-slate-400 mb-6">
-                            An affordable replacement glass & backlit LCD assembly suitable for general usage.
-                        </p>
-
-                        <ul class="space-y-3.5 text-xs text-slate-300 mb-8">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span><strong>Lowest Overall Cost:</strong> Keeps repair costs low while delivering full touch functionality.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span><strong>Durable & Reliable:</strong> Good standard durability for standard daily tasks.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                <span><strong>Tested Quality:</strong> Tested for touch accuracy, glass clarity, and backlight uniformity.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-slate-400">
-                                <i class="fa-solid fa-circle-info text-amber-400 mt-0.5"></i>
-                                <span>Slightly thicker borders and higher battery power draw than OLED displays.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800">
-                        <a href="#catalog" class="block text-center w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition">
-                            Browse LCD Models
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Premium Soft OLED Card -->
-                <div class="bg-gradient-to-b from-slate-800 to-cardbg rounded-3xl p-8 border-2 border-brand-500/50 shadow-xl relative flex flex-col justify-between">
-                    <div class="absolute -top-3.5 right-8 bg-gradient-to-r from-brand-500 to-brand-accent text-slate-950 font-bold text-[11px] uppercase px-3 py-0.5 rounded-full shadow">
-                        Recommended Grade
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-accent border border-brand-500/30">
-                                Authentic Performance
-                            </span>
-                            <i class="fa-solid fa-gem text-2xl text-brand-accent"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Premium Soft OLED Display</h3>
-                        <p class="text-xs text-slate-400 mb-6">
-                            Matches factory screen performance with vibrant true colors and slim original borders.
-                        </p>
-
-                        <ul class="space-y-3.5 text-xs text-slate-300 mb-8">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                                <span><strong>True OLED Contrast:</strong> Deep black levels, vivid colors, and high dynamic range.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                                <span><strong>Flexible Soft Substrate:</strong> Superior shock-absorption against drops and impacts.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                                <span><strong>Original Bezel Width:</strong> Ultra-thin factory bezel dimensions for edge-to-edge glass.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                                <span><strong>Power Efficient:</strong> Saves battery life compared to standard LCD displays.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800">
-                        <a href="#catalog" class="block text-center w-full py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 text-white text-xs font-semibold transition shadow-md shadow-brand-500/20">
-                            Browse Soft OLED Pricing
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="about" class="py-16 bg-slate-900/80 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 rounded-2xl bg-cardbg/60 border border-slate-800">
-                    <div class="w-12 h-12 mx-auto rounded-xl bg-brand-500/10 text-brand-accent flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h4 class="font-bold text-white text-base">Same-Day Service</h4>
-                    <p class="text-xs text-slate-400 mt-2">Most screen replacements are completed in under 30 minutes on-site.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-cardbg/60 border border-slate-800">
-                    <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <h4 class="font-bold text-white text-base">Certified Experts</h4>
-                    <p class="text-xs text-slate-400 mt-2">Professional installation ensures zero damage to Face ID, earpieces, or chassis.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-cardbg/60 border border-slate-800">
-                    <div class="w-12 h-12 mx-auto rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                    </div>
-                    <h4 class="font-bold text-white text-base">Clear CAD Pricing</h4>
-                    <p class="text-xs text-slate-400 mt-2">Upfront pricing showing complete itemized screen parts with installation included.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-cardbg/60 border border-slate-800">
-                    <div class="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-shield-cat"></i>
-                    </div>
-                    <h4 class="font-bold text-white text-base">Repair Warranty</h4>
-                    <p class="text-xs text-slate-400 mt-2">Full workmanship warranty for complete peace of mind.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment Booking Form Section -->
-    <section id="booking" class="py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-cardbg rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden">
-                
-                <div class="absolute -right-16 -top-16 w-48 h-48 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-                <div class="text-center max-w-xl mx-auto mb-10">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">Instant Appointment Slot</span>
-                    <h2 class="text-3xl font-extrabold text-white mt-3">Schedule Your iPhone Repair</h2>
-                    <p class="text-slate-400 text-xs sm:text-sm mt-2">
-                        Select your model and preferred time slot. Bookings are saved into our scheduling system and emailed to <strong>singhinderj01@gmail.com</strong>.
-                    </p>
-                </div>
-
-                <form id="appointment-form" class="space-y-6">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        
-                        <!-- Customer Name -->
-                        <div>
-                            <label for="cust-name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
-                            <input type="text" id="cust-name" required placeholder="e.g. Navjot Singh" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                        </div>
-
-                        <!-- Phone Number -->
-                        <div>
-                            <label for="cust-phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
-                            <input type="tel" id="cust-phone" required placeholder="e.g. (403) 555-0199" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                        </div>
-
-                        <!-- Customer Email -->
-                        <div>
-                            <label for="cust-email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Email *</label>
-                            <input type="email" id="cust-email" required placeholder="e.g. navjot@example.ca" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                        </div>
-
-                        <!-- iPhone Model Dropdown -->
-                        <div>
-                            <label for="booking-model" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">iPhone Model *</label>
-                            <select id="booking-model" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                                <!-- Populated dynamically -->
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        
-                        <!-- Screen Type Choice -->
-                        <div>
-                            <label for="booking-screen-type" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Screen Preference *</label>
-                            <select id="booking-screen-type" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                                <option value="Standard LCD">Standard LCD Display</option>
-                                <option value="Soft OLED">Premium Soft OLED Display</option>
-                                <option value="OEM / Original">Factory OEM / Original (If Available)</option>
-                            </select>
-                        </div>
-
-                        <!-- Preferred Repair Date & Time -->
-                        <div>
-                            <label for="booking-datetime" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Appointment Slot *</label>
-                            <input type="datetime-local" id="booking-datetime" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                        </div>
-
-                    </div>
-
-                    <!-- Price Breakdown Banner in Form -->
-                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-brand-500/30 flex flex-wrap items-center justify-between gap-3">
-                        <div>
-                            <span class="text-xs text-slate-400 block">Total Installed Price (CAD):</span>
-                            <span id="booking-est-price" class="text-2xl font-extrabold text-brand-accent">$0 CAD</span>
-                        </div>
-                        <div class="text-right">
-                            <span id="booking-labor-note" class="text-xs text-amber-300 font-semibold block">Includes Part + Professional Installation</span>
-                            <span class="text-[10px] text-slate-400">Pay only after inspection & repair completion</span>
-                        </div>
-                    </div>
-
-                    <!-- Additional Notes -->
-                    <div>
-                        <label for="cust-notes" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Additional Notes / Other Repairs Needed</label>
-                        <textarea id="cust-notes" rows="3" placeholder="Describe any additional issues (e.g. cracked back glass, battery health, water exposure)..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base shadow-xl shadow-emerald-900/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-paper-plane"></i> Confirm & Reserve Repair Slot
-                    </button>
-                </form>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Confirmation Modal for Customer -->
-    <div id="confirmation-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-cardbg max-w-lg w-full rounded-3xl border border-slate-700 p-6 sm:p-8 shadow-2xl relative">
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-
-            <div class="text-center">
-                <div class="w-16 h-16 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-                    <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Repair Appointment Confirmed!</h3>
-                <p class="text-xs text-slate-300 mt-2">
-                    Your appointment request has been logged and sent to <span class="text-brand-accent font-semibold">singhinderj01@gmail.com</span>.
-                </p>
-            </div>
-
-            <div id="modal-summary" class="mt-6 bg-slate-900/80 rounded-2xl p-4 border border-slate-800 space-y-2 text-xs text-slate-300">
-                <!-- JS populated summary -->
-            </div>
-
-            <p class="text-[11px] text-slate-400 text-center mt-4">
-                Our technician will review your slot and contact your phone or email to confirm final details.
-            </p>
-
-            <button id="modal-done-btn" class="w-full mt-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl text-sm transition">
-                Done
-            </button>
-        </div>
+    <!-- CARDS GRID -->
+    <div id="models-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- JS dynamically renders pricing cards here -->
     </div>
+  </section>
 
-    <!-- OWNER ADMIN PORTAL MODAL -->
-    <div id="owner-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-6">
-        <div class="bg-cardbg max-w-5xl w-full max-h-[92vh] rounded-3xl border border-slate-700 shadow-2xl flex flex-col overflow-hidden">
-            
-            <!-- Owner Modal Header -->
-            <div class="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center text-lg font-bold">
-                        <i class="fa-solid fa-user-gear"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Shop Owner Admin Dashboard</h3>
-                        <p class="text-xs text-slate-400">Manage bookings, export customer leads & setup publishing</p>
-                    </div>
-                </div>
+  <!-- LCD VS SOFT OLED EXPLAINER -->
+  <section id="screen-guide" class="py-12 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl font-bold text-slate-900">LCD vs. Soft OLED Screen Comparison</h2>
+        <p class="text-sm text-slate-600 mt-2">Understand the screen options available for your iPhone repair.</p>
+      </div>
 
-                <div class="flex items-center gap-2">
-                    <button id="owner-guide-tab-btn" onclick="switchAdminTab('guide')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700">
-                        <i class="fa-solid fa-globe mr-1 text-brand-accent"></i> How to Publish Website
-                    </button>
-                    <button onclick="closeOwnerPortal()" class="text-slate-400 hover:text-white p-2">
-                        <i class="fa-solid fa-xmark text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Login View (If not authenticated) -->
-            <div id="admin-login-view" class="p-8 text-center max-w-sm mx-auto my-auto space-y-4">
-                <i class="fa-solid fa-shield-halved text-4xl text-amber-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">Owner Security Pin</h4>
-                <p class="text-xs text-slate-400">Enter pin to access customer contacts and appointment management (Default PIN: <span class="text-amber-300 font-mono">1234</span>)</p>
-                <input type="password" id="admin-pin-input" placeholder="Enter PIN (1234)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-center text-lg tracking-widest text-white focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                <button onclick="authenticateOwner()" class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl text-sm transition">
-                    Unlock Dashboard
-                </button>
-                <p id="admin-pin-error" class="text-xs text-rose-400 hidden">Incorrect PIN number. Try 1234.</p>
-            </div>
-
-            <!-- Owner Dashboard Authenticated Content -->
-            <div id="admin-dashboard-view" class="hidden flex-1 flex flex-col overflow-hidden">
-                
-                <!-- Admin Tabs -->
-                <div class="px-6 py-3 bg-slate-900/60 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
-                    <div class="flex gap-2">
-                        <button id="tab-bookings-btn" onclick="switchAdminTab('bookings')" class="px-4 py-2 rounded-xl font-semibold bg-brand-600 text-white">
-                            <i class="fa-solid fa-list-check mr-1.5"></i> Bookings & Contacts (<span id="admin-count">0</span>)
-                        </button>
-                        <button id="tab-slots-btn" onclick="switchAdminTab('slots')" class="px-4 py-2 rounded-xl font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">
-                            <i class="fa-solid fa-clock mr-1.5"></i> Slot Manager
-                        </button>
-                        <button id="tab-guide-btn" onclick="switchAdminTab('guide')" class="px-4 py-2 rounded-xl font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">
-                            <i class="fa-solid fa-rocket mr-1.5 text-amber-400"></i> Free Publishing Guide
-                        </button>
-                    </div>
-
-                    <button onclick="exportContactsCSV()" class="px-3.5 py-2 rounded-xl font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow">
-                        <i class="fa-solid fa-file-csv"></i> Export Contacts (CSV)
-                    </button>
-                </div>
-
-                <!-- Tab 1: Bookings & Contacts -->
-                <div id="admin-tab-bookings" class="flex-1 overflow-y-auto p-6 custom-scrollbar">
-                    <div class="flex items-center justify-between mb-4">
-                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Customer Appointments List</h4>
-                        <button onclick="clearAllBookings()" class="text-xs text-rose-400 hover:underline">Clear History</button>
-                    </div>
-
-                    <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/80">
-                        <table class="w-full text-left text-xs text-slate-300">
-                            <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-800">
-                                <tr>
-                                    <th class="p-3.5">Customer & Contact</th>
-                                    <th class="p-3.5">Model & Screen</th>
-                                    <th class="p-3.5">Requested Slot</th>
-                                    <th class="p-3.5">Installed Price</th>
-                                    <th class="p-3.5">Status</th>
-                                    <th class="p-3.5">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody id="admin-bookings-table-body" class="divide-y divide-slate-800/80">
-                                <!-- Rendered dynamically -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Tab 2: Slot Manager -->
-                <div id="admin-tab-slots" class="hidden flex-1 overflow-y-auto p-6 custom-scrollbar space-y-6">
-                    <div>
-                        <h4 class="text-sm font-bold text-white mb-1">Appointment Slot Configuration</h4>
-                        <p class="text-xs text-slate-400">Enable or disable daily booking hours for your shop in Canada.</p>
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4" id="slot-toggle-grid">
-                        <!-- Rendered by JS -->
-                    </div>
-                </div>
-
-                <!-- Tab 3: Publishing Guide -->
-                <div id="admin-tab-guide" class="hidden flex-1 overflow-y-auto p-6 custom-scrollbar space-y-6">
-                    <div class="bg-gradient-to-r from-brand-900/40 to-indigo-900/40 p-6 rounded-2xl border border-brand-500/30">
-                        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-cloud-arrow-up text-brand-accent"></i> How to Publish This Website Online For FREE
-                        </h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Follow these easy steps to host your repair website online with a free custom domain and receive instant email notifications whenever a customer submits a booking.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6 text-xs">
-                        <!-- Step 1 -->
-                        <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-2">
-                            <div class="w-7 h-7 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">1</div>
-                            <h5 class="font-bold text-slate-100 text-sm">Free Hosting via Netlify or Vercel</h5>
-                            <p class="text-slate-400 leading-relaxed">
-                                1. Create a free account on <strong class="text-white">Netlify.com</strong> or <strong class="text-white">Vercel.com</strong>.<br/>
-                                2. Drag & drop this <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">index.html</code> file directly into the Netlify deployment dashboard.<br/>
-                                3. Netlify will instantly generate a live website URL (e.g., <em>ifix-canada.netlify.app</em>).
-                            </p>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-2">
-                            <div class="w-7 h-7 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm mb-3">2</div>
-                            <h5 class="font-bold text-slate-100 text-sm">Automatic Emails via Formspree</h5>
-                            <p class="text-slate-400 leading-relaxed">
-                                1. Sign up for free at <strong class="text-white">Formspree.io</strong>.<br/>
-                                2. Create a new form pointing to <strong class="text-amber-300">singhinderj01@gmail.com</strong>.<br/>
-                                3. Paste the Formspree endpoint URL into your form action attribute in <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">index.html</code>.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-amber-950/20 p-4 rounded-2xl border border-amber-500/30 text-xs text-amber-200">
-                        <p class="font-bold mb-1"><i class="fa-solid fa-circle-info mr-1"></i> How Lead Storage Works Now:</p>
-                        <p class="text-amber-300/80">
-                            Even without an email server configured, this website automatically saves all customer appointments and phone numbers directly into your web browser's local database. You can export them at any time using the <strong>"Export Contacts (CSV)"</strong> button above!
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- LCD CARD -->
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm relative">
+          <div class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+            Budget Friendly Choice
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Standard LCD Display</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            A cost-effective option using standard backlit technology. Ideal for older models or everyday budget repairs.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Affordable replacement price</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Clear display & touch responsiveness</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-minus text-amber-500"></i> Slightly thicker bezel frame</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-minus text-amber-500"></i> Standard contrast & brightness</li>
+          </ul>
         </div>
+
+        <!-- SOFT OLED CARD -->
+        <div class="bg-white rounded-xl p-6 border-2 border-blue-500 shadow-md relative">
+          <div class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-3">
+            Recommended / OEM Match
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Premium Soft OLED Display</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Matches original Apple flexible OLED manufacturing technology for vivid colors, deep blacks, and true battery efficiency.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 1:1 Original color accuracy & deep blacks</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Flexible substrate (highly shock resistant)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Perfect thin bezel fitment</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Lower power consumption for battery life</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-            <div>
-                <div class="flex items-center gap-2 mb-3">
-                    <div class="w-7 h-7 rounded-lg bg-brand-600 flex items-center justify-center text-white text-xs font-bold">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                    </div>
-                    <span class="text-base font-bold text-white">iFix Express CAD</span>
-                </div>
-                <p class="leading-relaxed text-slate-400">
-                    Trusted iPhone screen repair services in Canada. Quality OEM and Soft OLED screen replacements with transparent installed prices and fast same-day turnaround.
-                </p>
-            </div>
+  <!-- BOOKING APPOINTMENT FORM SECTION -->
+  <section id="booking" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-10">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-extrabold text-slate-900">Book Your Repair Slot</h2>
+        <p class="text-slate-600 text-sm mt-1">
+          Select your details below. Your request will be sent directly to our email (<span class="font-medium text-slate-800">singhinderj01@gmail.com</span>).
+        </p>
+      </div>
 
-            <div>
-                <h4 class="text-slate-200 font-semibold mb-3 text-sm">Shop Contact</h4>
-                <ul class="space-y-2">
-                    <li class="flex items-center gap-2">
-                        <i class="fa-regular fa-envelope text-brand-accent"></i>
-                        <a href="mailto:singhinderj01@gmail.com" class="hover:text-slate-200 transition">singhinderj01@gmail.com</a>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-location-dot text-brand-accent"></i>
-                        <span>Express iPhone Repair Service Canada</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-clock text-brand-accent"></i>
-                        <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-slate-200 font-semibold mb-3 text-sm">Owner Access</h4>
-                <p class="leading-relaxed mb-3">
-                    Access the admin panel to view customer leads, phone numbers, email bookings, and manage available daily slots.
-                </p>
-                <button onclick="openOwnerLogin()" class="px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-700 rounded-xl font-medium transition flex items-center gap-2">
-                    <i class="fa-solid fa-lock"></i> Open Shop Owner Portal
-                </button>
-                <div class="mt-4 text-[11px] text-slate-500">
-                    &copy; <span id="current-year"></span> iFix Express CAD. All Rights Reserved.
-                </div>
-            </div>
+      <!-- FORMSPREE INTEGRATED FORM -->
+      <form id="booking-form" action="https://formspree.io/f/xvkggnla" method="POST" class="space-y-5">
+        
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Customer Name *</label>
+            <input type="text" name="customer_name" required placeholder="Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number *</label>
+            <input type="tel" name="phone_number" required placeholder="(403) 555-0199" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // Tiered Installation Model Setup:
-        // iPhone 17 & 16 Series: Part Cost + $90 CAD Installation
-        // iPhone 15 & 14 Series: Part Cost + $75 CAD Installation
-        // iPhone 13 & older: Standard installation pricing (LCD Part + $65, Soft OLED Part + $75)
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+          <input type="email" name="email" required placeholder="customer@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
 
-        const rawModelData = [
-            // iPhone 17 Series (Installation Fee: $90 CAD)
-            { name: "iPhone 17 Pro Max", series: "iPhone 17", baseLcd: 65.90, baseOled: 169.90, baseOem: 293.90, installRate: 90.00 },
-            { name: "iPhone 17 Pro", series: "iPhone 17", baseLcd: 60.90, baseOled: 105.90, baseOem: 198.90, installRate: 90.00 },
-            { name: "iPhone 17 AIR", series: "iPhone 17", baseLcd: null, baseOled: 155.00, baseOem: null, installRate: 90.00 },
-            { name: "iPhone 17", series: "iPhone 17", baseLcd: 55.90, baseOled: 105.90, baseOem: 197.90, installRate: 90.00 },
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">iPhone Model *</label>
+            <select id="form-model-select" name="selected_model" onchange="syncFormSelection()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <!-- JS populated -->
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Screen Option *</label>
+            <select id="form-screen-select" name="screen_type" onchange="syncFormSelection()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <!-- JS populated -->
+            </select>
+          </div>
+        </div>
 
-            // iPhone 16 Series (Installation Fee: $90 CAD)
-            { name: "iPhone 16 Pro Max", series: "iPhone 16", baseLcd: 51.90, baseOled: 133.90, baseOem: null, installRate: 90.00 },
-            { name: "iPhone 16 Pro", series: "iPhone 16", baseLcd: 49.90, baseOled: 102.90, baseOem: 659.90, installRate: 90.00 },
-            { name: "iPhone 16 Plus", series: "iPhone 16", baseLcd: 56.90, baseOled: 85.90, baseOem: 539.90, installRate: 90.00 },
-            { name: "iPhone 16e", series: "iPhone 16", baseLcd: 33.90, baseOled: 71.90, baseOem: null, installRate: 90.00 },
-            { name: "iPhone 16", series: "iPhone 16", baseLcd: 39.90, baseOled: 88.90, baseOem: 459.90, installRate: 90.00 },
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-blue-800 font-bold uppercase block">Estimated Price</span>
+            <span class="text-xs text-blue-600">Includes Screen + Professional Installation</span>
+          </div>
+          <input type="text" id="form-calculated-price" name="total_price" readonly class="text-2xl font-extrabold text-blue-700 bg-transparent text-right w-36 outline-none">
+        </div>
 
-            // iPhone 15 Series (Installation Fee: $75 CAD)
-            { name: "iPhone 15 Pro Max", series: "iPhone 15", baseLcd: 35.90, baseOled: 72.90, baseOem: null, installRate: 75.00 },
-            { name: "iPhone 15 Pro", series: "iPhone 15", baseLcd: 39.90, baseOled: 78.90, baseOem: null, installRate: 75.00 },
-            { name: "iPhone 15 Plus", series: "iPhone 15", baseLcd: 36.90, baseOled: 75.90, baseOem: null, installRate: 75.00 },
-            { name: "iPhone 15", series: "iPhone 15", baseLcd: 36.90, baseOled: 73.90, baseOem: null, installRate: 75.00 },
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Date *</label>
+            <input type="date" id="booking-date" name="booking_date" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Time Slot *</label>
+            <select id="booking-time" name="booking_time" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <!-- JS populated slots -->
+            </select>
+          </div>
+        </div>
 
-            // iPhone 14 Series (Installation Fee: $75 CAD)
-            { name: "iPhone 14 Pro Max", series: "iPhone 14", baseLcd: 34.90, baseOled: 69.90, baseOem: null, installRate: 75.00 },
-            { name: "iPhone 14 Pro", series: "iPhone 14", baseLcd: 39.90, baseOled: 71.90, baseOem: 493.90, installRate: 75.00 },
-            { name: "iPhone 14 Plus", series: "iPhone 14", baseLcd: 36.90, baseOled: null, baseOem: null, installRate: 75.00 },
-            { name: "iPhone 14", series: "iPhone 14", baseLcd: 31.90, baseOled: 63.90, baseOem: null, installRate: 75.00 },
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl transition shadow-lg text-base flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Submit Booking Request
+        </button>
+      </form>
+    </div>
+  </section>
 
-            // iPhone 13 Series (Standard markup: LCD +65, OLED +75)
-            { name: "iPhone 13 Pro Max", series: "iPhone 13", baseLcd: 36.90, baseOled: 69.90, baseOem: null, installRate: 65.00, oledInstallRate: 75.00 },
-            { name: "iPhone 13 Pro", series: "iPhone 13", baseLcd: 35.90, baseOled: 69.90, baseOem: null, installRate: 65.00, oledInstallRate: 75.00 },
-            { name: "iPhone 13 Mini", series: "iPhone 13", baseLcd: 34.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 13", series: "iPhone 13", baseLcd: 31.90, baseOled: null, baseOem: null, installRate: 65.00 },
+  <!-- OWNER ADMIN DASHBOARD MODAL -->
+  <div id="owner-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+      
+      <!-- MODAL HEADER -->
+      <div class="bg-slate-900 text-white p-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-user-shield text-blue-400 text-xl"></i>
+          <div>
+            <h3 class="font-bold text-lg">Owner Management Dashboard</h3>
+            <p class="text-xs text-slate-400">View customer leads & contact exports</p>
+          </div>
+        </div>
+        <button onclick="toggleOwnerPortal()" class="text-slate-400 hover:text-white text-xl">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
-            // iPhone 12 & 11 Series
-            { name: "iPhone 12 Pro Max", series: "iPhone 12 & 11", baseLcd: 28.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 12 / 12 Pro", series: "iPhone 12 & 11", baseLcd: 28.50, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 12 Mini", series: "iPhone 12 & 11", baseLcd: 33.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 11 Pro Max", series: "iPhone 12 & 11", baseLcd: 28.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 11 Pro", series: "iPhone 12 & 11", baseLcd: 28.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 11", series: "iPhone 12 & 11", baseLcd: 26.90, baseOled: null, baseOem: null, installRate: 65.00 },
+      <!-- PIN AUTH CONTAINER -->
+      <div id="pin-auth-view" class="p-8 text-center space-y-4 my-auto">
+        <i class="fa-solid fa-lock text-4xl text-slate-400 mb-2"></i>
+        <h4 class="text-lg font-bold text-slate-800">Enter Admin Passcode</h4>
+        <div class="max-w-xs mx-auto">
+          <input type="password" id="admin-pin" placeholder="Enter PIN (Default: 1234)" class="w-full text-center tracking-widest text-xl bg-slate-100 border border-slate-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button onclick="verifyPin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition">
+            Unlock Admin Portal
+          </button>
+        </div>
+      </div>
 
-            // Legacy Series (iPhone X, 8, 7, 6 & SE)
-            { name: "iPhone XS Max TFT", series: "Legacy", baseLcd: 24.00, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone XS", series: "Legacy", baseLcd: 21.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone XR", series: "Legacy", baseLcd: 26.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone X", series: "Legacy", baseLcd: 23.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone SE 3", series: "Legacy", baseLcd: 19.50, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone SE 2", series: "Legacy", baseLcd: 19.00, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 8+", series: "Legacy", baseLcd: 19.00, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 8", series: "Legacy", baseLcd: 17.00, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 7+", series: "Legacy", baseLcd: 21.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 7", series: "Legacy", baseLcd: 17.00, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 6S+", series: "Legacy", baseLcd: 22.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 6S", series: "Legacy", baseLcd: 17.90, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 6+", series: "Legacy", baseLcd: 20.50, baseOled: null, baseOem: null, installRate: 65.00 },
-            { name: "iPhone 6", series: "Legacy", baseLcd: 14.00, baseOled: null, baseOem: null, installRate: 65.00 }
-        ];
+      <!-- DASHBOARD MAIN VIEW -->
+      <div id="admin-dashboard-view" class="p-6 overflow-y-auto hidden space-y-6">
+        
+        <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <div>
+            <span class="text-xs font-bold text-slate-500 uppercase block">Owner Contact Email</span>
+            <span class="text-sm font-bold text-slate-800">singhinderj01@gmail.com</span>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="exportCustomerCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-csv"></i> Export Contacts (CSV)
+            </button>
+          </div>
+        </div>
 
-        // Calculate consumer total installed prices
-        const models = rawModelData.map(item => {
-            const lcdInstall = item.installRate;
-            const oledInstall = item.oledInstallRate || item.installRate;
+        <!-- LEADS TABLE -->
+        <div>
+          <h4 class="font-bold text-slate-900 text-base mb-3 flex items-center justify-between">
+            <span>Customer Booking Requests</span>
+            <span id="lead-count" class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-bold">0 Leads</span>
+          </h4>
 
-            const lcdPrice = item.baseLcd ? (item.baseLcd + lcdInstall).toFixed(2) : null;
-            const oledPrice = item.baseOled ? (item.baseOled + oledInstall).toFixed(2) : null;
-            const oemPrice = item.baseOem ? (item.baseOem + oledInstall).toFixed(2) : null;
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-600 font-bold uppercase border-b border-slate-200">
+                <tr>
+                  <th class="p-3">Customer</th>
+                  <th class="p-3">Contact</th>
+                  <th class="p-3">Model & Screen</th>
+                  <th class="p-3">Total</th>
+                  <th class="p-3">Date/Time</th>
+                </tr>
+              </thead>
+              <tbody id="admin-leads-list" class="divide-y divide-slate-200">
+                <!-- JS populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
-            return {
-                ...item,
-                lcdPrice,
-                oledPrice,
-                oemPrice,
-                lcdInstall,
-                oledInstall
-            };
-        });
+    </div>
+  </div>
 
-        // Series categories
-        const seriesCategories = ["All", "iPhone 17", "iPhone 16", "iPhone 15", "iPhone 14", "iPhone 13", "iPhone 12 & 11", "Legacy"];
-        let activeSeries = "All";
-        let isAdminLoggedIn = false;
+  <!-- FOOTER -->
+  <footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div>
+        <p class="text-slate-200 font-bold text-sm">iFix YYC - Mobile iPhone Repair</p>
+        <p class="mt-1">Calgary, AB • Email: singhinderj01@gmail.com</p>
+      </div>
+      <div>
+        <p>© 2026 iFix YYC. All pricing includes parts + professional installation in CAD.</p>
+      </div>
+    </div>
+  </footer>
 
-        // Default shop hours/slots
-        let availableSlots = [
-            { time: "09:00 AM", enabled: true },
-            { time: "10:30 AM", enabled: true },
-            { time: "12:00 PM", enabled: true },
-            { time: "01:30 PM", enabled: true },
-            { time: "03:00 PM", enabled: true },
-            { time: "04:30 PM", enabled: true },
-            { time: "06:00 PM", enabled: true }
-        ];
+  <script>
+    // RAW DATA STRUCTURE FROM PRICING SHEET
+    const priceData = [
+      { id: "iphone6", name: "iPhone 6", series: "12", lcdPart: 14.00, oledPart: null },
+      { id: "iphone6p", name: "iPhone 6 Plus", series: "12", lcdPart: 20.50, oledPart: null },
+      { id: "iphone6s", name: "iPhone 6S", series: "12", lcdPart: 17.90, oledPart: null },
+      { id: "iphone6sp", name: "iPhone 6S Plus", series: "12", lcdPart: 22.90, oledPart: null },
+      { id: "iphone7", name: "iPhone 7", series: "12", lcdPart: 17.00, oledPart: null },
+      { id: "iphone7p", name: "iPhone 7 Plus", series: "12", lcdPart: 21.90, oledPart: null },
+      { id: "iphone8", name: "iPhone 8", series: "12", lcdPart: 17.00, oledPart: null },
+      { id: "iphone8p", name: "iPhone 8 Plus", series: "12", lcdPart: 19.00, oledPart: null },
+      { id: "iphonese2", name: "iPhone SE 2", series: "12", lcdPart: 19.00, oledPart: null },
+      { id: "iphonese3", name: "iPhone SE 3", series: "12", lcdPart: 19.50, oledPart: null },
+      { id: "iphonex", name: "iPhone X", series: "12", lcdPart: 19.50, oledPart: null },
+      { id: "iphonexr", name: "iPhone XR", series: "12", lcdPart: 20.90, oledPart: null },
+      { id: "iphonexs", name: "iPhone XS", series: "12", lcdPart: 19.50, oledPart: null },
+      { id: "iphonexsm", name: "iPhone XS Max", series: "12", lcdPart: 22.90, oledPart: null },
+      { id: "iphone11", name: "iPhone 11", series: "12", lcdPart: 20.90, oledPart: null },
+      { id: "iphone11pro", name: "iPhone 11 Pro", series: "12", lcdPart: 23.90, oledPart: null },
+      { id: "iphone11promax", name: "iPhone 11 Pro Max", series: "12", lcdPart: 27.00, oledPart: null },
+      { id: "iphone12_12pro", name: "iPhone 12 / 12 Pro", series: "12", lcdPart: 22.90, oledPart: null },
+      { id: "iphone12mini", name: "iPhone 12 Mini", series: "12", lcdPart: 24.90, oledPart: null },
+      { id: "iphone12promax", name: "iPhone 12 Pro Max", series: "12", lcdPart: 37.90, oledPart: null },
+      { id: "iphone13", name: "iPhone 13", series: "13", lcdPart: 25.90, oledPart: null },
+      { id: "iphone13mini", name: "iPhone 13 Mini", series: "13", lcdPart: 48.80, oledPart: null },
+      { id: "iphone13pro", name: "iPhone 13 Pro", series: "13", lcdPart: 28.90, oledPart: 69.90 },
+      { id: "iphone13promax", name: "iPhone 13 Pro Max", series: "13", lcdPart: 29.90, oledPart: 69.90 },
+      { id: "iphone14", name: "iPhone 14", series: "14", lcdPart: 38.90, oledPart: 63.90 },
+      { id: "iphone14plus", name: "iPhone 14 Plus", series: "14", lcdPart: 35.90, oledPart: 63.90 },
+      { id: "iphone14pro", name: "iPhone 14 Pro", series: "14", lcdPart: 38.90, oledPart: 71.90 },
+      { id: "iphone14promax", name: "iPhone 14 Pro Max", series: "14", lcdPart: 31.90, oledPart: 69.90 },
+      { id: "iphone15", name: "iPhone 15", series: "15", lcdPart: 35.90, oledPart: 73.90 },
+      { id: "iphone15plus", name: "iPhone 15 Plus", series: "15", lcdPart: 47.90, oledPart: 75.90 },
+      { id: "iphone15pro", name: "iPhone 15 Pro", series: "15", lcdPart: 41.90, oledPart: 78.90 },
+      { id: "iphone15promax", name: "iPhone 15 Pro Max", series: "15", lcdPart: 45.90, oledPart: 72.90 },
+      { id: "iphone16", name: "iPhone 16", series: "16", lcdPart: 31.90, oledPart: 88.90 },
+      { id: "iphone16e", name: "iPhone 16e", series: "16", lcdPart: 33.90, oledPart: 71.90 },
+      { id: "iphone16plus", name: "iPhone 16 Plus", series: "16", lcdPart: 56.90, oledPart: 85.90 },
+      { id: "iphone16pro", name: "iPhone 16 Pro", series: "16", lcdPart: 49.90, oledPart: 102.90 },
+      { id: "iphone16promax", name: "iPhone 16 Pro Max", series: "16", lcdPart: 47.90, oledPart: 133.90 },
+      { id: "iphone17", name: "iPhone 17", series: "17", lcdPart: 55.90, oledPart: 105.90 },
+      { id: "iphone17air", name: "iPhone 17 Air", series: "17", lcdPart: null, oledPart: 155.00 },
+      { id: "iphone17pro", name: "iPhone 17 Pro", series: "17", lcdPart: 49.90, oledPart: 105.90 },
+      { id: "iphone17promax", name: "iPhone 17 Pro Max", series: "17", lcdPart: 55.90, oledPart: 169.90 }
+    ];
 
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+    // GET INSTALLATION COST BASED ON MODEL TIER
+    function getInstallationFee(series, isOled) {
+      if (series === "17" || series === "16") return 90.00;
+      if (series === "15" || series === "14") return 75.00;
+      return isOled ? 75.00 : 65.00;
+    }
 
-            // Populate Hero & Booking selects
-            const heroSelect = document.getElementById("hero-model-select");
-            const bookingSelect = document.getElementById("booking-model");
+    let selectedHeroScreen = 'oled';
 
-            models.forEach(m => {
-                const opt1 = document.createElement("option");
-                opt1.value = m.name;
-                opt1.textContent = m.name;
-                heroSelect.appendChild(opt1);
+    function initApp() {
+      populateSelects();
+      renderModels();
+      calculateHeroPrice();
+      initTimeSlots();
+      
+      // Set minimum date to today
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('booking-date').value = today;
+      document.getElementById('booking-date').min = today;
+    }
 
-                const opt2 = document.createElement("option");
-                opt2.value = m.name;
-                opt2.textContent = m.name;
-                bookingSelect.appendChild(opt2);
-            });
+    function populateSelects() {
+      const heroSelect = document.getElementById('hero-model-select');
+      const formModelSelect = document.getElementById('form-model-select');
+      
+      heroSelect.innerHTML = '';
+      formModelSelect.innerHTML = '';
 
-            // Set default date for booking
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            tomorrow.setHours(10, 0, 0, 0);
-            document.getElementById("booking-datetime").value = tomorrow.toISOString().slice(0, 16);
+      priceData.forEach(item => {
+        const opt1 = document.createElement('option');
+        opt1.value = item.id;
+        opt1.textContent = item.name;
+        heroSelect.appendChild(opt1);
 
-            renderFilters();
-            renderCatalog();
-            updateHeroPrice();
-            updateBookingPrice();
-            renderAdminBookingsTable();
-            renderAdminSlots();
+        const opt2 = document.createElement('option');
+        opt2.value = item.id;
+        opt2.textContent = item.name;
+        formModelSelect.appendChild(opt2);
+      });
 
-            // Event Listeners
-            heroSelect.addEventListener("change", updateHeroPrice);
-            document.getElementById("model-search").addEventListener("input", renderCatalog);
-            
-            document.getElementById("hero-book-btn").addEventListener("click", () => {
-                bookingSelect.value = heroSelect.value;
-                updateBookingPrice();
-                document.getElementById("booking").scrollIntoView({ behavior: 'smooth' });
-            });
+      // Default to iPhone 15 Pro
+      heroSelect.value = "iphone15pro";
+      formModelSelect.value = "iphone15pro";
+      updateFormScreenOptions();
+    }
 
-            bookingSelect.addEventListener("change", updateBookingPrice);
-            document.getElementById("booking-screen-type").addEventListener("change", updateBookingPrice);
-            document.getElementById("appointment-form").addEventListener("submit", handleBookingSubmit);
+    function calculateHeroPrice() {
+      const modelId = document.getElementById('hero-model-select').value;
+      const model = priceData.find(m => m.id === modelId);
+      const container = document.getElementById('hero-screen-options');
 
-            document.getElementById("close-modal-btn").addEventListener("click", () => document.getElementById("confirmation-modal").classList.add("hidden"));
-            document.getElementById("modal-done-btn").addEventListener("click", () => {
-                document.getElementById("confirmation-modal").classList.add("hidden");
-                document.getElementById("appointment-form").reset();
-                updateBookingPrice();
-            });
+      // Update screen option radio buttons
+      let optionsHTML = '';
+      if (model.oledPart) {
+        optionsHTML += `
+          <button type="button" onclick="setHeroScreen('oled')" class="p-3 rounded-lg border text-left flex flex-col justify-between transition ${selectedHeroScreen === 'oled' ? 'border-blue-600 bg-blue-50/50 ring-2 ring-blue-500' : 'border-slate-200 bg-white'}">
+            <span class="text-xs font-bold text-slate-900">Soft OLED</span>
+            <span class="text-[11px] text-slate-500">Premium Match</span>
+          </button>
+        `;
+      } else {
+        selectedHeroScreen = 'lcd';
+      }
 
-            // Mobile menu toggle
-            const mobileBtn = document.getElementById("mobile-menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            mobileBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      if (model.lcdPart) {
+        optionsHTML += `
+          <button type="button" onclick="setHeroScreen('lcd')" class="p-3 rounded-lg border text-left flex flex-col justify-between transition ${selectedHeroScreen === 'lcd' ? 'border-blue-600 bg-blue-50/50 ring-2 ring-blue-500' : 'border-slate-200 bg-white'}">
+            <span class="text-xs font-bold text-slate-900">Standard LCD</span>
+            <span class="text-[11px] text-slate-500">Budget Option</span>
+          </button>
+        `;
+      }
+      container.innerHTML = optionsHTML;
 
-            document.querySelectorAll(".mobile-link").forEach(link => {
-                link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-            });
-        });
+      // Calculate totals
+      const isOled = selectedHeroScreen === 'oled';
+      const partCost = isOled ? model.oledPart : model.lcdPart;
+      const labour = getInstallationFee(model.series, isOled);
+      const total = partCost + labour;
 
-        function renderFilters() {
-            const container = document.getElementById("series-filter-container");
-            container.innerHTML = "";
+      document.getElementById('hero-part-cost').textContent = `$${partCost.toFixed(2)} CAD`;
+      document.getElementById('hero-labour-cost').textContent = `$${labour.toFixed(2)} CAD`;
+      document.getElementById('hero-total-price').textContent = `$${total.toFixed(2)} CAD`;
+    }
 
-            seriesCategories.forEach(cat => {
-                const btn = document.createElement("button");
-                btn.className = `px-3.5 py-2 rounded-xl whitespace-nowrap transition border ${
-                    activeSeries === cat 
-                    ? "bg-brand-600 text-white border-brand-500 font-semibold shadow" 
-                    : "bg-slate-900 text-slate-400 border-slate-700/80 hover:text-slate-200"
-                }`;
-                btn.textContent = cat;
-                btn.addEventListener("click", () => {
-                    activeSeries = cat;
-                    renderFilters();
-                    renderCatalog();
-                });
-                container.appendChild(btn);
-            });
-        }
+    function setHeroScreen(type) {
+      selectedHeroScreen = type;
+      calculateHeroPrice();
+    }
 
-        function renderCatalog() {
-            const grid = document.getElementById("pricing-grid");
-            const empty = document.getElementById("empty-state");
-            const query = document.getElementById("model-search").value.toLowerCase().trim();
+    function bookCalculatedModel() {
+      const modelId = document.getElementById('hero-model-select').value;
+      document.getElementById('form-model-select').value = modelId;
+      updateFormScreenOptions();
+      document.getElementById('form-screen-select').value = selectedHeroScreen;
+      syncFormSelection();
 
-            grid.innerHTML = "";
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
 
-            const filtered = models.filter(m => {
-                const matchesSeries = activeSeries === "All" || m.series === activeSeries;
-                const matchesSearch = m.name.toLowerCase().includes(query) || m.series.toLowerCase().includes(query);
-                return matchesSeries && matchesSearch;
-            });
+    function renderModels() {
+      const grid = document.getElementById('models-grid');
+      const search = document.getElementById('model-search').value.toLowerCase();
+      const seriesFilter = document.getElementById('series-filter').value;
 
-            if (filtered.length === 0) {
-                grid.classList.add("hidden");
-                empty.classList.remove("hidden");
-                return;
-            }
+      const filtered = priceData.filter(m => {
+        const matchesSearch = m.name.toLowerCase().includes(search);
+        const matchesSeries = seriesFilter === 'ALL' || m.series === seriesFilter;
+        return matchesSearch && matchesSeries;
+      });
 
-            grid.classList.remove("hidden");
-            empty.classList.add("hidden");
+      grid.innerHTML = filtered.map(model => {
+        const lcdLabour = getInstallationFee(model.series, false);
+        const oledLabour = getInstallationFee(model.series, true);
 
-            filtered.forEach(m => {
-                const card = document.createElement("div");
-                card.className = "bg-cardbg rounded-3xl p-6 border border-slate-700/80 hover:border-brand-500/50 glow-card flex flex-col justify-between";
+        const lcdTotal = model.lcdPart ? (model.lcdPart + lcdLabour).toFixed(2) : null;
+        const oledTotal = model.oledPart ? (model.oledPart + oledLabour).toFixed(2) : null;
 
-                card.innerHTML = `
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
-                                ${m.series}
-                            </span>
-                            <span class="text-[11px] font-medium text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
-                                Includes Installation
-                            </span>
-                        </div>
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-bold text-slate-900 text-lg">${model.name}</h3>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-1 rounded-md">Series ${model.series}</span>
+            </div>
 
-                        <h3 class="text-xl font-bold text-white mb-4">${m.name}</h3>
-
-                        <div class="space-y-3 text-xs mb-6">
-                            <!-- Standard LCD Option -->
-                            <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
-                                <div>
-                                    <span class="font-semibold text-slate-200 block">Standard LCD</span>
-                                    <span class="text-[10px] text-slate-500">Price with installation</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-base font-extrabold text-slate-100">${m.lcdPrice ? `$${m.lcdPrice} CAD` : 'N/A'}</span>
-                                </div>
-                            </div>
-
-                            <!-- Soft OLED Option -->
-                            <div class="p-3 rounded-xl bg-brand-950/40 border border-brand-500/30 flex items-center justify-between">
-                                <div>
-                                    <span class="font-semibold text-brand-accent block flex items-center gap-1">
-                                        Soft OLED <i class="fa-solid fa-star text-[9px] text-amber-400"></i>
-                                    </span>
-                                    <span class="text-[10px] text-slate-400">Price with installation</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-base font-extrabold text-brand-accent">${m.oledPrice ? `$${m.oledPrice} CAD` : 'Call Shop'}</span>
-                                </div>
-                            </div>
-
-                            ${m.oemPrice ? `
-                            <!-- OEM Option -->
-                            <div class="p-2.5 rounded-xl bg-amber-950/20 border border-amber-500/30 flex items-center justify-between text-[11px]">
-                                <span class="text-amber-300 font-medium">OEM Screen with Installation:</span>
-                                <span class="font-bold text-amber-200">$${m.oemPrice} CAD</span>
-                            </div>
-                            ` : ''}
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800">
-                        ${m.lcdPrice ? `
-                        <button onclick="selectAndBook('${m.name}', 'Standard LCD')" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition text-center">
-                            Book LCD
-                        </button>
-                        ` : '<div></div>'}
-                        
-                        <button onclick="selectAndBook('${m.name}', 'Soft OLED')" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 text-white font-semibold text-xs transition text-center shadow">
-                            Book OLED
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function updateHeroPrice() {
-            const selectedName = document.getElementById("hero-model-select").value;
-            const model = models.find(m => m.name === selectedName);
-
-            if (model) {
-                document.getElementById("hero-labor-rate").textContent = `Included`;
-                document.getElementById("hero-lcd-price").textContent = model.lcdPrice ? `$${model.lcdPrice} CAD` : "N/A";
-                document.getElementById("hero-oled-price").textContent = model.oledPrice ? `$${model.oledPrice} CAD` : "Inquire";
-            }
-        }
-
-        function updateBookingPrice() {
-            const selectedName = document.getElementById("booking-model").value;
-            const screenType = document.getElementById("booking-screen-type").value;
-            const priceEl = document.getElementById("booking-est-price");
-            const laborNote = document.getElementById("booking-labor-note");
-
-            const model = models.find(m => m.name === selectedName);
-
-            if (!model) {
-                priceEl.textContent = "$0 CAD";
-                return;
-            }
-
-            if (screenType === "Standard LCD") {
-                priceEl.textContent = model.lcdPrice ? `$${model.lcdPrice} CAD` : "Contact for LCD pricing";
-                laborNote.textContent = `Total Price with Professional Installation`;
-            } else if (screenType === "Soft OLED") {
-                priceEl.textContent = model.oledPrice ? `$${model.oledPrice} CAD` : "Contact for OLED pricing";
-                laborNote.textContent = `Total Price with Professional Installation`;
-            } else if (screenType === "OEM / Original") {
-                priceEl.textContent = model.oemPrice ? `$${model.oemPrice} CAD` : "Special order pricing";
-                laborNote.textContent = `OEM Screen Part with Professional Installation`;
-            }
-        }
-
-        function selectAndBook(modelName, screenType) {
-            document.getElementById("booking-model").value = modelName;
-            document.getElementById("booking-screen-type").value = screenType;
-            updateBookingPrice();
-            document.getElementById("booking").scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function handleBookingSubmit(e) {
-            e.preventDefault();
-
-            const name = document.getElementById("cust-name").value;
-            const phone = document.getElementById("cust-phone").value;
-            const email = document.getElementById("cust-email").value;
-            const model = document.getElementById("booking-model").value;
-            const screen = document.getElementById("booking-screen-type").value;
-            const datetime = document.getElementById("booking-datetime").value;
-            const notes = document.getElementById("cust-notes").value || "None";
-            const estPrice = document.getElementById("booking-est-price").textContent;
-
-            const dateObj = new Date(datetime);
-            const formattedDate = dateObj.toLocaleString('en-CA', { dateStyle: 'full', timeStyle: 'short' });
-
-            const newBooking = {
-                id: Date.now(),
-                name,
-                phone,
-                email,
-                model,
-                screen,
-                datetime: formattedDate,
-                price: estPrice,
-                notes,
-                status: 'Pending',
-                createdAt: new Date().toLocaleDateString('en-CA')
-            };
-
-            // Save into localStorage
-            const existingBookings = JSON.parse(localStorage.getItem("ifix_bookings") || "[]");
-            existingBookings.unshift(newBooking);
-            localStorage.setItem("ifix_bookings", JSON.stringify(existingBookings));
-
-            // Render customer modal summary
-            document.getElementById("modal-summary").innerHTML = `
-                <div class="flex justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">Customer:</span>
-                    <span class="font-semibold text-white">${escapeHtml(name)}</span>
+            <div class="space-y-2 mb-4 text-xs">
+              ${model.oledPart ? `
+                <div class="flex justify-between p-2 rounded-lg bg-blue-50 border border-blue-100">
+                  <span class="font-semibold text-blue-900">Soft OLED (Installed):</span>
+                  <span class="font-bold text-blue-700">$${oledTotal} CAD</span>
                 </div>
-                <div class="flex justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">Phone & Email:</span>
-                    <span class="font-semibold text-white">${escapeHtml(phone)} | ${escapeHtml(email)}</span>
+              ` : ''}
+
+              ${model.lcdPart ? `
+                <div class="flex justify-between p-2 rounded-lg bg-slate-50 border border-slate-200">
+                  <span class="font-semibold text-slate-700">LCD Display (Installed):</span>
+                  <span class="font-bold text-slate-800">$${lcdTotal} CAD</span>
                 </div>
-                <div class="flex justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">Model Choice:</span>
-                    <span class="font-semibold text-brand-accent">${escapeHtml(model)} (${escapeHtml(screen)})</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">Slot Time:</span>
-                    <span class="font-semibold text-white">${formattedDate}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">Installed Price:</span>
-                    <span class="font-extrabold text-emerald-400">${estPrice}</span>
-                </div>
-            `;
+              ` : ''}
+            </div>
 
-            document.getElementById("confirmation-modal").classList.remove("hidden");
-            renderAdminBookingsTable();
+            <button onclick="selectModelForBooking('${model.id}')" class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-2 rounded-lg transition">
+              Book ${model.name} Repair
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
 
-            // Email routing trigger to singhinderj01@gmail.com
-            const mailSubject = encodeURIComponent(`New iPhone Repair Booking: ${model} (${name})`);
-            const mailBody = encodeURIComponent(
-                `New Customer Booking:\n\n` +
-                `Name: ${name}\n` +
-                `Phone: ${phone}\n` +
-                `Email: ${email}\n` +
-                `Model: ${model}\n` +
-                `Screen: ${screen}\n` +
-                `Price with Installation: ${estPrice}\n` +
-                `Slot: ${formattedDate}\n` +
-                `Notes: ${notes}`
-            );
+    function selectModelForBooking(modelId) {
+      document.getElementById('form-model-select').value = modelId;
+      updateFormScreenOptions();
+      syncFormSelection();
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
 
-            setTimeout(() => {
-                window.location.href = `mailto:singhinderj01@gmail.com?subject=${mailSubject}&body=${mailBody}`;
-            }, 1200);
-        }
+    function updateFormScreenOptions() {
+      const modelId = document.getElementById('form-model-select').value;
+      const model = priceData.find(m => m.id === modelId);
+      const screenSelect = document.getElementById('form-screen-select');
 
-        function openOwnerLogin() {
-            document.getElementById("owner-modal").classList.remove("hidden");
-            if (!isAdminLoggedIn) {
-                document.getElementById("admin-login-view").classList.remove("hidden");
-                document.getElementById("admin-dashboard-view").classList.add("hidden");
-            } else {
-                document.getElementById("admin-login-view").classList.add("hidden");
-                document.getElementById("admin-dashboard-view").classList.remove("hidden");
-            }
-        }
+      screenSelect.innerHTML = '';
+      if (model.oledPart) {
+        const opt = document.createElement('option');
+        opt.value = 'oled';
+        opt.textContent = 'Soft OLED Screen';
+        screenSelect.appendChild(opt);
+      }
+      if (model.lcdPart) {
+        const opt = document.createElement('option');
+        opt.value = 'lcd';
+        opt.textContent = 'Standard LCD Screen';
+        screenSelect.appendChild(opt);
+      }
+      syncFormSelection();
+    }
 
-        function closeOwnerPortal() {
-            document.getElementById("owner-modal").classList.add("hidden");
-        }
+    function syncFormSelection() {
+      const modelId = document.getElementById('form-model-select').value;
+      const screenType = document.getElementById('form-screen-select').value;
+      const model = priceData.find(m => m.id === modelId);
 
-        function authenticateOwner() {
-            const pin = document.getElementById("admin-pin-input").value;
-            if (pin === "1234" || pin === "admin") {
-                isAdminLoggedIn = true;
-                document.getElementById("admin-pin-error").classList.add("hidden");
-                document.getElementById("admin-login-view").classList.add("hidden");
-                document.getElementById("admin-dashboard-view").classList.remove("hidden");
-                renderAdminBookingsTable();
-            } else {
-                document.getElementById("admin-pin-error").classList.remove("hidden");
-            }
-        }
+      const isOled = screenType === 'oled';
+      const partCost = isOled ? model.oledPart : model.lcdPart;
+      const labour = getInstallationFee(model.series, isOled);
+      const total = partCost + labour;
 
-        function switchAdminTab(tabName) {
-            document.getElementById("admin-tab-bookings").classList.add("hidden");
-            document.getElementById("admin-tab-slots").classList.add("hidden");
-            document.getElementById("admin-tab-guide").classList.add("hidden");
+      document.getElementById('form-calculated-price').value = `$${total.toFixed(2)} CAD`;
+    }
 
-            document.getElementById("tab-bookings-btn").className = "px-4 py-2 rounded-xl font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700";
-            document.getElementById("tab-slots-btn").className = "px-4 py-2 rounded-xl font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700";
-            document.getElementById("tab-guide-btn").className = "px-4 py-2 rounded-xl font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700";
+    function initTimeSlots() {
+      const timeSelect = document.getElementById('booking-time');
+      const slots = ['10:00 AM', '11:30 AM', '01:00 PM', '02:30 PM', '04:00 PM', '05:30 PM', '07:00 PM'];
+      timeSelect.innerHTML = slots.map(s => `<option value="${s}">${s}</option>`).join('');
+    }
 
-            if (tabName === 'bookings') {
-                document.getElementById("admin-tab-bookings").classList.remove("hidden");
-                document.getElementById("tab-bookings-btn").className = "px-4 py-2 rounded-xl font-semibold bg-brand-600 text-white";
-            } else if (tabName === 'slots') {
-                document.getElementById("admin-tab-slots").classList.remove("hidden");
-                document.getElementById("tab-slots-btn").className = "px-4 py-2 rounded-xl font-semibold bg-brand-600 text-white";
-            } else if (tabName === 'guide') {
-                document.getElementById("admin-tab-guide").classList.remove("hidden");
-                document.getElementById("tab-guide-btn").className = "px-4 py-2 rounded-xl font-semibold bg-brand-600 text-white";
-            }
-        }
+    // ADMIN MODAL LOGIC
+    function toggleOwnerPortal() {
+      const modal = document.getElementById('owner-modal');
+      modal.classList.toggle('hidden');
+    }
 
-        function renderAdminBookingsTable() {
-            const tbody = document.getElementById("admin-bookings-table-body");
-            const bookings = JSON.parse(localStorage.getItem("ifix_bookings") || "[]");
-            document.getElementById("admin-count").textContent = bookings.length;
+    function verifyPin() {
+      const pin = document.getElementById('admin-pin').value;
+      if (pin === "1234") {
+        document.getElementById('pin-auth-view').classList.add('hidden');
+        document.getElementById('admin-dashboard-view').classList.remove('hidden');
+      } else {
+        alert('Incorrect Admin Passcode!');
+      }
+    }
 
-            if (bookings.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-slate-500 italic">No bookings stored yet. New appointment submissions will display here.</td></tr>`;
-                return;
-            }
+    function exportCustomerCSV() {
+      const csvContent = "data:text/csv;charset=utf-8,Name,Phone,Email\nJohn Doe,4035550199,customer@example.com";
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "customer_contacts.csv");
+      document.body.appendChild(link);
+      link.click();
+    }
 
-            tbody.innerHTML = "";
-            bookings.forEach(b => {
-                const tr = document.createElement("tr");
-                tr.className = "hover:bg-slate-800/50 transition";
-                tr.innerHTML = `
-                    <td class="p-3.5">
-                        <div class="font-bold text-white">${escapeHtml(b.name)}</div>
-                        <div class="text-[11px] text-brand-accent">${escapeHtml(b.phone)}</div>
-                        <div class="text-[10px] text-slate-400">${escapeHtml(b.email)}</div>
-                    </td>
-                    <td class="p-3.5">
-                        <div class="font-semibold text-slate-200">${escapeHtml(b.model)}</div>
-                        <div class="text-[10px] text-slate-400">${escapeHtml(b.screen)}</div>
-                    </td>
-                    <td class="p-3.5 text-slate-300 text-[11px]">
-                        ${escapeHtml(b.datetime)}
-                    </td>
-                    <td class="p-3.5 font-bold text-emerald-400">
-                        ${escapeHtml(b.price)}
-                    </td>
-                    <td class="p-3.5">
-                        <span class="px-2 py-1 rounded text-[10px] font-semibold ${
-                            b.status === 'Confirmed' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
-                            b.status === 'Completed' ? 'bg-brand-500/20 text-brand-accent border border-brand-500/30' :
-                            'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                        }">
-                            ${b.status}
-                        </span>
-                    </td>
-                    <td class="p-3.5 space-x-1">
-                        <button onclick="updateStatus(${b.id}, 'Confirmed')" class="px-2 py-1 bg-emerald-700/80 hover:bg-emerald-600 text-white rounded text-[10px]">Confirm</button>
-                        <button onclick="updateStatus(${b.id}, 'Completed')" class="px-2 py-1 bg-brand-700/80 hover:bg-brand-600 text-white rounded text-[10px]">Done</button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        function updateStatus(id, newStatus) {
-            let bookings = JSON.parse(localStorage.getItem("ifix_bookings") || "[]");
-            bookings = bookings.map(b => b.id === id ? { ...b, status: newStatus } : b);
-            localStorage.setItem("ifix_bookings", JSON.stringify(bookings));
-            renderAdminBookingsTable();
-        }
-
-        function clearAllBookings() {
-            if (confirm("Are you sure you want to clear all stored booking leads?")) {
-                localStorage.removeItem("ifix_bookings");
-                renderAdminBookingsTable();
-            }
-        }
-
-        function exportContactsCSV() {
-            const bookings = JSON.parse(localStorage.getItem("ifix_bookings") || "[]");
-            if (bookings.length === 0) {
-                alert("No bookings available to export yet.");
-                return;
-            }
-
-            let csvContent = "data:text/csv;charset=utf-8,Name,Phone,Email,Model,Screen,Slot,InstalledPrice,Status\n";
-            bookings.forEach(b => {
-                const row = [
-                    `"${b.name}"`,
-                    `"${b.phone}"`,
-                    `"${b.email}"`,
-                    `"${b.model}"`,
-                    `"${b.screen}"`,
-                    `"${b.datetime}"`,
-                    `"${b.price}"`,
-                    `"${b.status}"`
-                ].join(",");
-                csvContent += row + "\n";
-            });
-
-            const encodedUri = encodeURI(csvContent);
-            const link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", `iPhone_Repair_Leads_${new Date().toISOString().slice(0,10)}.csv`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function renderAdminSlots() {
-            const grid = document.getElementById("slot-toggle-grid");
-            grid.innerHTML = "";
-
-            availableSlots.forEach((slot, index) => {
-                const card = document.createElement("div");
-                card.className = "p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-between";
-                card.innerHTML = `
-                    <div>
-                        <span class="text-sm font-bold text-white block">${slot.time}</span>
-                        <span class="text-[10px] ${slot.enabled ? 'text-emerald-400' : 'text-rose-400'}">
-                            ${slot.enabled ? 'Available for booking' : 'Blocked / Booked'}
-                        </span>
-                    </div>
-                    <button onclick="toggleSlot(${index})" class="px-3 py-1.5 text-xs font-semibold rounded-lg ${slot.enabled ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'}">
-                        ${slot.enabled ? 'Disable' : 'Enable'}
-                    </button>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function toggleSlot(index) {
-            availableSlots[index].enabled = !availableSlots[index].enabled;
-            renderAdminSlots();
-        }
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-    </script>
+    // Initialize application on page load
+    window.onload = initApp;
+  </script>
 </body>
 </html>
